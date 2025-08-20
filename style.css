@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #ff9800, #ff6a00, #ff3d00);
+    background-clip: text;           /* standar */
+    -webkit-background-clip: text;   /* untuk WebKit */
+    -webkit-text-fill-color: transparent;
+    animation: gradientText 6s ease infinite;
+    background-size: 200% 200%;
+}
+
+@keyframes gradientText {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background:linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4, #a1c4fd, #c2e9fb);
+    animation: gradientBG 8s ease infinite;
+    background-size: 400% 400%;
+    padding: 20px;
+}   
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+/* dari div class */
+.wrapper{
+    background: linear-gradient(145deg, #ffffff, #f1f1f1);
+    width: 100%;
+    max-width: 450px;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.wrapper .pass-field{
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.pass-field input{
+    width: 100%;
+    height: 60px;
+    padding: 0 50px 0 18px;
+    outline: none;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: 2px solid #d3d3d3;
+    transition: border-color 0.3s ease;
+}
+
+.pass-field input:focus{
+    border-color: #ff6f61;
+    box-shadow: 0 0 8px rgba(255, 111, 97, 0.7);
+}
+
+.pass-fieldi i{
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%); 
+    color: #555;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.wrapper .content p{
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #ff6a00;
+;;
+;
+}
+/* dari .requirement-list */
+.requirement-list{
+    margin-top: 15px;
+}
+
+.requirement-list li{
+    list-style: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+    color: #555;
+    transition: color o.3s ease;
+}
+
+.requirement-list li i{
+    font-size: 0.7rem;
+    color: #bbb;
+    width: 20px;
+    transition: color 0.3s ease;
+}
+
+/* sesudah java untuk .requirement-list valid untuk warna valid */
+.requirement-list li.valid i{
+    color: #4caf50
+}
+
+.requirement-list li.valid span{
+    color: #4caf50
+}
+
+.requirement-list li.valid i::before{
+    content: "\f00c";
+    font-family: monospace;
+    font-weight: 900;
+}
